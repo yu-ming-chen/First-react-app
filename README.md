@@ -3,7 +3,10 @@
 This is a counter build using react js.
 It functions like a shopping cart where you can add
 items and show total number of types of item in your shopping cart.
+
 ![App Screen Shot](./image/AppScreenShot.png)
+
+Fig. Screen shot of counter app
 
 ## Quick Start
 
