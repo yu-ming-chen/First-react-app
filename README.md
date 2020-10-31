@@ -1,15 +1,25 @@
 ### My counter app
 
 This is a counter build using react js.
+It functions like a shopping cart where you can add
+items and show total number of types of item in your shopping cart.
 ![App Screen Shot](./image/AppScreenShot.png)
 
 ## Quick Start
 
 1. Ensure that npm is installed on your computer
 2. Clone the repo
-3. Run `npm start`
+3. Run `npm start` in the directory using terminal
 4. Your browser should automatically load up
    > if browser is not loaded, go to http://localhost:3000/
+
+## Features
+
+1. Add items
+2. Add individual item
+3. Delete individual items
+4. Delete item
+5. Show total number unique item
 
 <!-- # Getting Started with Create React App
 
