@@ -22,7 +22,8 @@ Fig. Screen shot of counter app
 2. Add individual item
 3. Delete individual items
 4. Delete item
-5. Show total number unique item
+5. Reset all item count to zero
+6. Show total number unique item
 
 <!-- # Getting Started with Create React App
 
