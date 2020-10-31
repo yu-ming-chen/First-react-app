@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+### My counter app
+
+This is a counter build using react js.
+![App Screen Shot](./image/AppScreenShot.png)
+
+## Quick Start
+
+1. Ensure that npm is installed on your computer
+2. Clone the repo
+3. Run `npm start`
+4. Your browser should automatically load up
+   > if browser is not loaded, go to http://localhost:3000/
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +80,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

@@ -1,25 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import NavBar from "./components/navbar";
+import Counters from "./components/counters";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    key: 0,
+    counters: [],
+  };
+
+  constructor() {
+    super();
+  }
+
+  componentDidMount() {
+    //Ajax call
+  }
+
+  handleAddCounter = () => {
+    let counters = this.state.counters;
+    let key = this.state.key;
+    key++;
+    counters.push({ id: key, value: 0 });
+
+    this.setState({ counters: counters, key: key });
+  };
+
+  handleReset = () => {
+    const counters = this.state.counters.map((c) => {
+      c.value = 0;
+      return c;
+    });
+    this.setState({ counters });
+  };
+
+  handleDelete = (counterId) => {
+    const counters = this.state.counters.filter((c) => c.id !== counterId);
+    this.setState({ counters }); //same key and id therefore can just beone input
+  };
+
+  handleIncrement = (counter) => {
+    const counters = [...this.state.counters]; //reference to the original counter
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+    this.setState({ counters });
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar
+          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+        />
+        <main className="container">
+          <Counters
+            counters={this.state.counters}
+            onReset={this.handleReset}
+            onIncrement={this.handleIncrement}
+            onDelete={this.handleDelete}
+            onAdd={this.handleAddCounter}
+          />
+        </main>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
